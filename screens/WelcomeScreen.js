@@ -11,14 +11,9 @@ function WelcomeScreen() {
 
   const [fetchedMessage, setFetchedMessage] = useState("");
   useEffect(() => {
-    axios
-      .get(
-        "https://redux-c1971-default-rtdb.firebaseio.com/message.json?auth=" +
-          token
-      )
-      .then((response) => {
-        setFetchedMessage(response.data);
-      });
+    axios.get("messageUrl" + token).then((response) => {
+      setFetchedMessage(response.data);
+    });
   }, [token]);
 
   return (

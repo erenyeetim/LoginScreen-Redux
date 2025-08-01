@@ -1,9 +1,9 @@
 import axios from "axios";
 
-const API_KEY = "AIzaSyDoNicFjLMFHzXF81JWCrtnVDGpi6_fdSQ";
+const API_KEY = "API_KEY";
 
 async function authenticate(mode, email, password) {
-  const url = `https://identitytoolkit.googleapis.com/v1/accounts:${mode}?key=${API_KEY}`;
+  const url = `URL`;
   const response = await axios.post(url, {
     email: email,
     password: password,
